@@ -25,10 +25,7 @@ def compareTriplets(a, b):
         elif a[i] < b[i]:
             Bob += 1
     
-    if Alice > Bob:
-        return Alice, Bob
-    else:
-        return Bob, Alice
+    return Alice, Bob
             
     
 
@@ -45,3 +42,4 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
+
