@@ -13,23 +13,10 @@ import sys
 #
 
 def staircase(n):
-    i = 0
-    j = 0
-    k = n
-    
-    while i < n:
-        
-        while k > i + 1:
-            print(" ")
-            k -= 1
-            
-        while j <= i:
-            print("#")
-            j += 1
-        
-        print("")
+    i = 1
+    while i <= n:
+        print(" "*(n-i) + "#"*i)
         i += 1
-        
         
 
 if __name__ == '__main__':
