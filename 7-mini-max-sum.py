@@ -20,10 +20,10 @@ def miniMaxSum(arr):
         current_sum = sum(arr) - arr[i]
         
         if current_sum < min_sum:
-            min_sum == current_sum
+            min_sum = current_sum
         
         if current_sum > max_sum:
-            max_sum == current_sum
+            max_sum = current_sum
     
     print(min_sum, max_sum)
         
