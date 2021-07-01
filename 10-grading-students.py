@@ -14,17 +14,24 @@ import sys
 #
 
 def gradingStudents(grades):
+        
+    new_grades = []
     
-    for i in range(1, len(grades)):
+    for i in range(0, len(grades)):
         grade = grades[i]
         
         if grade < 38:
-            return grade
+            new_grades.append(grade)
+        
+        elif grade % 5 >= 3:
+            new_grades.append(grade)
         
         elif grade % 5 < 3:
             while grade % 5 != 0:
                 grade += 1
-            return grade
+            new_grades.append(grade)
+    
+    return new_grades
         
 
 if __name__ == '__main__':
