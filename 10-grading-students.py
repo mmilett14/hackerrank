@@ -23,16 +23,15 @@ def gradingStudents(grades):
         if grade < 38:
             new_grades.append(grade)
         
-        elif grade % 5 >= 3:
+        elif 5 - (grade % 5) >= 3:
             new_grades.append(grade)
         
-        elif grade % 5 < 3:
+        elif 5 - (grade % 5) < 3:
             while grade % 5 != 0:
                 grade += 1
             new_grades.append(grade)
     
     return new_grades
-        
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -51,4 +50,3 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
- 
